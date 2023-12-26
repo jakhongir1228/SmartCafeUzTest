@@ -8,10 +8,10 @@ import com.badoo.reaktive.scheduler.ioScheduler
 import java.io.BufferedReader
 import java.net.HttpURLConnection
 import java.net.URL
+import smartCafe.model.SmartDataResponse
 
 internal class KittenDataSourceImpl : KittenDataSource {
-
-    override fun load(limit: Int, page: Int): Maybe<String> =
+    override fun load(limit: Int, page: Int): Maybe<SmartDataResponse> =
         maybeFromFunction {
             val url = URL(makeKittenEndpointUrl(limit = limit, page = page))
             val connection = url.openConnection() as HttpURLConnection

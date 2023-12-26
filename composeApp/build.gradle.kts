@@ -59,6 +59,24 @@ kotlin {
             implementation(libs.material)
             implementation(libs.converter.gson)
             implementation(libs.gson)
+
+            // for retrofit
+            implementation(libs.retrofit)
+            implementation(libs.converter.gson)
+            implementation(libs.adapter.rxjava2)
+            implementation(libs.okhttp)
+            implementation(libs.okhttp.urlconnection)
+            implementation(libs.logging.interceptor)
+
+            //chuck interceptor for Network Debuggin
+            implementation(libs.library)
+            implementation(libs.library.no.op)
+
+            //mviKotlin
+            implementation(libs.mvikotlin)
+
+            //dagger
+            implementation(libs.dagger)
         }
     }
 }
